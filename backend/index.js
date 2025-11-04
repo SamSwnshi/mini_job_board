@@ -11,7 +11,8 @@ const port = process.env.PORT || 8080;
 app.use(cors())
 app.use(express.json()) 
 
-app.use('/api',authRoutes)
+app.use('/api/user',authRoutes)
+app.use('/api/internship',authRoutes)
 app.listen(port,()=>{
     configDB()
     console.log(`Server is Running on the PORT: ${port}`)
